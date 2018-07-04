@@ -11,5 +11,8 @@ export class CountryComponent implements OnInit {
 
   ngOnInit() {
   }
+  recycle() {
+    console.log("Welcome....")
+  }
 
 }
