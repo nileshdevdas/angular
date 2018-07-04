@@ -15,4 +15,7 @@ export class CountryComponent implements OnInit {
     console.log("Welcome....")
   }
 
+  centralizeConfig(){
+    
+  }
 }
