@@ -1,0 +1,15 @@
+<div class="panel panel-primary">
+	<button class="btn btn-success" (click)="displayEmployees()">SHOW EMP</button>
+    <div class="panel-heading">Weather</div>
+    <div class="panel-body">
+    	<div *ngIf="employees">
+    	 <table class="table table-bordered table-striped">
+    		<tr *ngFor="let employee of employees">
+    			<td>
+    			{{employee.id}} </td><td> {{employee.employee_name}} </td><td> {{employee.employee_salary}}</td>
+    		 </tr>
+    	</table>
+    	</div>
+     </div>
+    <div class="panel-footer">Copyright Synechron</div>
+  </div>
