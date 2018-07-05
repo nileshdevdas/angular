@@ -1,7 +1,7 @@
-<div class="panel panel-primary">
-	<button class="btn btn-success" (click)="displayEmployees()">SHOW EMP</button>
-    <div class="panel-heading">Weather</div>
+<div [ngClass]="eventState">
+		<div class="panel-heading">Weather Event Received {{counts}} --> {{country}}</div>
     <div class="panel-body">
+			<button class="btn btn-success" (click)="displayEmployees()">SHOW EMP</button>
     	<div *ngIf="employees">
     	 <table class="table table-bordered table-striped">
     		<tr *ngFor="let employee of employees">

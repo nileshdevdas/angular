@@ -1,5 +1,11 @@
 <div class="panel panel-primary">
   <div class="panel-heading">Countries</div>
-  <div class="panel-body">Body</div>
+  <div class="panel-body">
+    <a href="#" (click)="changeCountry($event)">India</a> |
+    <a href="#"  (click)="changeCountry($event)">USA</a> |
+    <a href="#"  (click)="changeCountry($event)">China</a>
+  </div>
+
   <div class="panel-footer">Copyright Synechron</div>
+  <div (click)="handleClick($event)">Click to send event</div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MessageService } from '../MessageService';
 
 @Component({
   selector: 'app-country',
@@ -6,16 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./country.component.css']
 })
 export class CountryComponent implements OnInit {
-
-  constructor() { }
+  // clickHandler .....
+  changeCountry($event) {
+    let countryClicked = $event.target.innerHTML;
+    this.messageService.sendEvent({country: countryClicked});
+    console.log("Event Fired.......")
+  }
+  private messageService: MessageService;
+  constructor(messageService: MessageService) {
+    this.messageService = messageService;
+  }
 
   ngOnInit() {
   }
-  recycle() {
-    console.log("Welcome....")
-  }
 
-  centralizeConfig(){
-    
-  }
 }

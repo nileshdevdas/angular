@@ -5,8 +5,9 @@ import { NavigatorComponent } from './navigator/navigator.component';
 import { CountryComponent } from './country/country.component';
 import { WeatherComponent } from './weather/weather.component';
 import {DataService} from './services/data.service';
-import {HttpModule} from '@angular/http'; //on ts import 
-
+import {HttpModule} from '@angular/http'; //on ts import
+// here i imported the message
+import {MessageService} from './MessageService';
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,10 +16,10 @@ import {HttpModule} from '@angular/http'; //on ts import
     WeatherComponent
   ],
   imports: [
-    BrowserModule, 
-    HttpModule 
+    BrowserModule,
+    HttpModule
   ],
-  providers: [DataService],
+  providers: [DataService, MessageService], // added as the provider
   bootstrap: [AppComponent]
 })
 export class AppModule { }
